@@ -52,19 +52,6 @@ class SendSms():
                 raise
         except:
             print(f"{Fore.LIGHTRED_EX}Gönderilemedi{Style.RESET_ALL}")
-    
-    
-    #bim
-    def Bim(self):
-        try:
-            bim = requests.post("https://bim.veesk.net:443/service/v1.0/account/login",  json={"phone": self.phone}, timeout=6)
-            if bim.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}Gönderildi{Style.RESET_ALL}")
-                self.adet += 1
-            else:
-                raise
-        except:
-            print(f"{Fore.LIGHTRED_EX}Gönderilemedi{Style.RESET_ALL}")
 
 
     #englishhome.com
